@@ -1,0 +1,135 @@
+html {
+    background-color: #2e3440;
+    background-image: url("images/background.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    font-family: "Source Code Pro", monospace;
+    color: white;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.card-border-wrap {
+    opacity: 95%;
+    position: relative;
+    background: linear-gradient(to bottom, #7856ff, #d1fbfa);
+    padding: 4px;
+    border-radius: 22px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.9);
+    transition: 0.2s;
+}
+
+.card {
+    padding: 30px 50px;
+    border-radius: 20px;
+    background: #2e34409f;
+}
+
+.card-border-wrap:hover, .card-border-wrap:active {
+    opacity: 92%;
+    transform: translateY(-4px);
+    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.9);
+}
+
+.card-logo {
+    margin-top: -80px;
+    display: flex;
+    justify-content: center;
+}
+
+.card-logo > img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    transition: 0.2s;
+}
+
+.card:hover > .card-logo > img, .card:active > .card-logo > img {
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    margin-top: 20px;
+}
+
+.text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 10px;
+}
+
+h1, h3 {
+    margin: 0;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    row-gap: 10px;
+}
+
+a {
+    color: white;
+}
+
+.links > a {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+}
+
+.links > a > svg {
+    width: 28px;
+    height: 28px;
+    fill: white;
+}
+
+.links > a > span {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.header {
+    padding-top: 10px;
+    color: transparent;
+}
+
+.footer {
+    padding-bottom: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .text {
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 10px;
+    }
+
+    .text-separator {
+        display: none;
+    }
+}
