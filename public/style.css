@@ -20,10 +20,19 @@ body {
 #root {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     justify-content: space-between;
+    flex-grow: 1;
     width: 100%;
     height: 100%;
+}
+
+.content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .card-border-wrap {
@@ -39,7 +48,7 @@ body {
 .card {
     padding: 30px 50px;
     border-radius: 20px;
-    background: #2e34409f;
+    background-color: #2e34409f;
 }
 
 .card-border-wrap:hover, .card-border-wrap:active {
@@ -60,6 +69,11 @@ body {
     border-radius: 50px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     transition: 0.2s;
+}
+
+.card-logo.alt > img {
+    border-radius: 10px;
+    background-color: #2e3440df;
 }
 
 .card:hover > .card-logo > img, .card:active > .card-logo > img {
@@ -83,6 +97,7 @@ body {
 
 h1, h3 {
     margin: 0;
+    text-align: center;
 }
 
 .links {
@@ -108,18 +123,22 @@ a {
     fill: white;
 }
 
+.links > a > svg.alt {
+    fill: none;
+}
+
 .links > a > span {
     flex-grow: 1;
     text-align: center;
 }
 
-.header {
-    padding-top: 10px;
-    color: transparent;
+.header, .footer {
+    padding: 10px;
+    text-align: center;
 }
 
-.footer {
-    padding-bottom: 10px;
+.header {
+    color: transparent;
 }
 
 @media screen and (max-width: 600px) {
@@ -131,5 +150,10 @@ a {
 
     .text-separator {
         display: none;
+    }
+
+    .content {
+        flex-direction: column;
+        gap: 100px;
     }
 }
