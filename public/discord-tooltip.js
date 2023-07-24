@@ -4,7 +4,7 @@ const discordTooltipText = "Tag copied to clipboard!"
 window.addEventListener("load", () => {
     discordTooltip = document.getElementById("discord-tooltip");
     discordTooltip.addEventListener("click", () => {
-        navigator.clipboard.writeText('Skye#2000').then(() => {
+        navigator.clipboard.writeText('skyecodes').then(() => {
             setTooltip(discordTooltip, discordTooltipText)
             clearTimeout(discordTooltipTimeoutId)
             discordTooltipTimeoutId = setTimeout(() => clearTooltip(discordTooltip), 3000)
